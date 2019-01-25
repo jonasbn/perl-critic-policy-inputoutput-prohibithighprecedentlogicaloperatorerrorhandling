@@ -21,8 +21,8 @@ my $critic = Perl::Critic->new(
 # The bug
 {
     my $str = q[
-        open my $fh, '<', ($file
-            || die "Can't open '$file': $!");
+        open my $fh, '<', $file
+            || die "Can't open '$file': $!";
     ];
 
     my @violations = $critic->critique( \$str );
