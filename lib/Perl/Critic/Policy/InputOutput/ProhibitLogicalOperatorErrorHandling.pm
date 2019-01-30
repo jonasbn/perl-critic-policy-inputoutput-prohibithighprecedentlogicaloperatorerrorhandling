@@ -31,6 +31,9 @@ sub violates {
 
     return if $elem->content() ne 'open';
 
+    # We discovered a parenthesis, so we are ok
+    return if $elem->snext_sibling()->content() =~ m/^[\s]*[(]/xism;
+
     if ($self->_is_logical_operator($elem->snext_sibling())) {
         return $self->violation( $DESC, $EXPL, $elem );
     }
