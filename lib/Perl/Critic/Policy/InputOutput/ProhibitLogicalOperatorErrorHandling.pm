@@ -76,6 +76,14 @@ This policy has no affiliation
 
 =head1 DESCRIPTION
 
+    open my $fh, '<', $file
+            || die "Can't open '$file': $!"; # not okay
+
+    open(my $fh, '<', $file)
+        || die "Can't open '$file': $!"; # okay
+
+    open my $fh, '<', $file
+        or die "Can't open '$file': $!"; # okay
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
