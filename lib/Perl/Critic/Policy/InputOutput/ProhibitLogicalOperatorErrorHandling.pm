@@ -64,7 +64,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling - prohibits logical in open statements
+Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling - prohibits logical error handling in open statements
 
 =head1 VERSION
 
