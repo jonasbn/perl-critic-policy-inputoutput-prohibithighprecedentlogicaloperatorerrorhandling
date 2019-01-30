@@ -1,6 +1,6 @@
 # NAME
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling - prohibits logical in open statements
+Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling - prohibits logical error handling in open statements
 
 # VERSION
 
@@ -11,6 +11,15 @@ This documentation describes version 0.01
 This policy has no affiliation
 
 # DESCRIPTION
+
+    open my $fh, '<', $file
+            || die "Can't open '$file': $!"; # not okay
+
+    open(my $fh, '<', $file)
+        || die "Can't open '$file': $!"; # okay
+
+    open my $fh, '<', $file
+        or die "Can't open '$file': $!"; # okay
 
 # CONFIGURATION AND ENVIRONMENT
 
