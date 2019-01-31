@@ -34,7 +34,7 @@ sub violates {
     # We discovered a parenthesis, so we are ok
     return if $self->_uses_parenthesis($elem);
 
-    if ($self->_is_logical_operator($elem->snext_sibling())) {
+    if ($self->_is_high_precedence_logical_operator($elem->snext_sibling())) {
         return $self->violation( $DESC, $EXPL, $elem );
     }
 
@@ -51,7 +51,7 @@ sub _uses_parenthesis {
     }
 }
 
-sub _is_logical_operator {
+sub _is_high_precedence_logical_operator {
     my ( $self, $sibling ) = @_;
 
     if ($sibling) {
@@ -60,7 +60,7 @@ sub _is_logical_operator {
                 return $TRUE;
             }
         }
-        return $self->_is_logical_operator($sibling->snext_sibling());
+        return $self->_is_high_precedence_logical_operator($sibling->snext_sibling());
     }
 
     return $FALSE;
