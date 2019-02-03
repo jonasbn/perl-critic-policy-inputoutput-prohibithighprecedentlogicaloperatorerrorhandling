@@ -12,6 +12,10 @@ This policy has no affiliation
 
 # DESCRIPTION
 
+This policy addresses an anti-pattern and possible bug. If you use 3-argument `open` combinted with the high precedence logical or operator `||` for error handling.
+
+If the file parameter is
+
     open my $fh, '<', $file
             || die "Can't open '$file': $!"; # not okay
 
@@ -20,6 +24,8 @@ This policy has no affiliation
 
     open my $fh, '<', $file
         or die "Can't open '$file': $!"; # okay
+
+Alternatively [autodie](https://metacpan.org/pod/autodie) can be used,
 
 # CONFIGURATION AND ENVIRONMENT
 
@@ -45,11 +51,11 @@ This distribution aims to adhere to the Perl::Critic::Policy standards and Perl 
 
 This distribution requires:
 
-- Perl 5.14
-- Carp
-- Readonly
-- Perl::Critic::Policy
-- Perl::Critic::Utils
+- [Perl 5.14](https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod)
+- [Carp](https://metacpan.org/pod/Carp)
+- [Readonly](https://metacpan.org/pod/Readonly)
+- [Perl::Critic::Policy](https://metacpan.org/pod/Perl::Critic::Policy)
+- [Perl::Critic::Utils](https://metacpan.org/pod/Perl::Critic::Utils)
 
 Please see the listing in the file: `cpanfile`, included with the distribution for a complete listing and description for configuration, test and development.
 

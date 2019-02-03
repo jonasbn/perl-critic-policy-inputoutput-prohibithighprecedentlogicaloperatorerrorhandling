@@ -86,6 +86,10 @@ This policy has no affiliation
 
 =head1 DESCRIPTION
 
+This policy addresses an anti-pattern and possible bug. If you use 3-argument C<open> combinted with the high precedence logical or operator C<||> for error handling.
+
+If the file parameter is
+
     open my $fh, '<', $file
             || die "Can't open '$file': $!"; # not okay
 
@@ -94,6 +98,8 @@ This policy has no affiliation
 
     open my $fh, '<', $file
         or die "Can't open '$file': $!"; # okay
+
+Alternatively L<autodie|https://metacpan.org/pod/autodie> can be used,
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
@@ -121,15 +127,15 @@ This distribution requires:
 
 =over
 
-=item * Perl 5.14
+=item * L<Perl 5.14|https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod>, released 2011-05-14
 
-=item * Carp
+=item * L<Carp|https://metacpan.org/pod/Carp>, in core since Perl 5.
 
-=item * Readonly
+=item * L<Readonly|https://metacpan.org/pod/Readonly>
 
-=item * Perl::Critic::Policy
+=item * L<Perl::Critic::Policy|https://metacpan.org/pod/Perl::Critic::Policy>
 
-=item * Perl::Critic::Utils
+=item * L<Perl::Critic::Utils|https://metacpan.org/pod/Perl::Critic::Utils>
 
 =back
 
