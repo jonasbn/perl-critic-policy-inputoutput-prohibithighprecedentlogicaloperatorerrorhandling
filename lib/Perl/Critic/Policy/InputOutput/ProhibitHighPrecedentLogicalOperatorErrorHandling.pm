@@ -1,4 +1,4 @@
-package Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling;
+package Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling;
 
 use 5.006001;
 use strict;
@@ -74,7 +74,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling - prohibits logical error handling in open statements
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling - prohibits logical error handling in open statements
 
 =head1 VERSION
 
@@ -189,9 +189,9 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 =head1 LICENSE AND COPYRIGHT
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling is (C) by jonasbn 2019
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is (C) by jonasbn 2019
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling is released under the Artistic License 2.0
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is released under the Artistic License 2.0
 
 Please see the LICENSE file included with the distribution of this module
 

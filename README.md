@@ -1,6 +1,6 @@
 # NAME
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling - prohibits logical error handling in open statements
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling - prohibits logical error handling in open statements
 
 # VERSION
 
@@ -51,8 +51,8 @@ This distribution aims to adhere to the Perl::Critic::Policy standards and Perl 
 
 This distribution requires:
 
-- [Perl 5.14](https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod)
-- [Carp](https://metacpan.org/pod/Carp)
+- [Perl 5.14](https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod), released 2011-05-14
+- [Carp](https://metacpan.org/pod/Carp), in core since Perl 5.
 - [Readonly](https://metacpan.org/pod/Readonly)
 - [Perl::Critic::Policy](https://metacpan.org/pod/Perl::Critic::Policy)
 - [Perl::Critic::Utils](https://metacpan.org/pod/Perl::Critic::Utils)
@@ -88,8 +88,8 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 # LICENSE AND COPYRIGHT
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling is (C) by jonasbn 2019
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is (C) by jonasbn 2019
 
-Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling is released under the Artistic License 2.0
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is released under the Artistic License 2.0
 
 Please see the LICENSE file included with the distribution of this module

@@ -15,7 +15,7 @@ allow_leading_tabs = 0
 
 #------------------------------------------------------------------------------
 
-[-InputOutput::ProhibitLogicalOperatorErrorHandling]
+[-InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling]
 
 #------------------------------------------------------------------------------
 

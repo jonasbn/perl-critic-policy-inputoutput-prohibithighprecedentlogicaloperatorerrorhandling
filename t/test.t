@@ -4,16 +4,16 @@ use Test::More qw(no_plan);
 use Env qw($TEST_VERBOSE);
 use Data::Dumper;
 
-use_ok 'Perl::Critic::Policy::InputOutput::ProhibitLogicalOperatorErrorHandling';
+use_ok 'Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling';
 
 require Perl::Critic;
 my $critic = Perl::Critic->new(
     '-profile'       => '',
-    '-single-policy' => 'InputOutput::ProhibitLogicalOperatorErrorHandling'
+    '-single-policy' => 'InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling'
 );
 {
     my @p = $critic->policies;
-    is( scalar @p, 1, 'single policy InputOutput::ProhibitLogicalOperatorErrorHandling' );
+    is( scalar @p, 1, 'single policy InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling' );
 
     my $policy = $p[0];
 }
