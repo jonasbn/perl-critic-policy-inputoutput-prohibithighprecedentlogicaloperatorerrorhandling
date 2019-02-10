@@ -1,6 +1,6 @@
 package Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling;
 
-use 5.006001;
+use 5.006;
 use strict;
 use warnings;
 use Readonly;
