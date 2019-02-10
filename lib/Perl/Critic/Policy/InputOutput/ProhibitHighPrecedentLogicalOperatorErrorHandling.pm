@@ -6,7 +6,7 @@ use warnings;
 use Readonly;
 use Data::Dumper;
 
-use Perl::Critic::Utils qw{ :severities :ppi };
+use Perl::Critic::Utils qw{ :severities :ppi :booleans };
 
 use base 'Perl::Critic::Policy';
 
@@ -14,8 +14,6 @@ use base 'Perl::Critic::Policy';
 
 Readonly::Scalar my $DESC  => q{Use of "||" for error handling in open statement};
 Readonly::Scalar my $EXPL  => q{Use "or" instead of "||", which shortcuts for error handling};
-Readonly::Scalar my $TRUE  => 1;
-Readonly::Scalar my $FALSE => 0;
 
 sub default_severity { return $SEVERITY_HIGH }
 sub default_themes   { return qw< bug > }
