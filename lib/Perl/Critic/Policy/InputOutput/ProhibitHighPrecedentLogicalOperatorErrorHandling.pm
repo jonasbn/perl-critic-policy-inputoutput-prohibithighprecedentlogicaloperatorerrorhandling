@@ -16,7 +16,7 @@ Readonly::Scalar my $DESC  => q{Use of "||" for error handling in open statement
 Readonly::Scalar my $EXPL  => q{Use "or" instead of "||", which shortcuts for error handling};
 
 sub default_severity { return $SEVERITY_HIGH }
-sub default_themes   { return qw< bug > }
+sub default_themes   { return qw< bugs > }
 
 sub applies_to {
     return qw<
@@ -181,7 +181,7 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 =over
 
-=item * L<Dave Cross (@davord)|https://twitter.com/jmaslak> / L<DAVECROSS|https://metacpan.org/author/DAVECROSS> for the blog post sparking the idea for this policy, see link to blog post under L</MOTIVATION> or L</REFERENCES>
+=item * L<Dave Cross (@davord)|https://twitter.com/davorg> / L<DAVECROSS|https://metacpan.org/author/DAVECROSS> for the blog post sparking the idea for this policy, see link to blog post under L</MOTIVATION> or L</REFERENCES>
 
 =back
 
