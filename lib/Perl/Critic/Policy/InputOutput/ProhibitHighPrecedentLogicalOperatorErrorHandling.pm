@@ -4,7 +4,6 @@ use 5.006;
 use strict;
 use warnings;
 use Readonly;
-use Data::Dumper;
 
 use Perl::Critic::Utils qw{ :severities :ppi :booleans };
 
