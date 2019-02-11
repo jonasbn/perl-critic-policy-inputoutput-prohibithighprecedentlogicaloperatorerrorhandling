@@ -107,7 +107,13 @@ This policy is not configurable at this time. Please see the TODO L</section>.
 
 =head1 INCOMPATIBILITIES
 
-This distribution holds no known incompatibilities at this time, please see L</DEPENDENCIES AND REQUIREMENTS> for details on version requirements.
+Do note that this policy conflicts with the policy:
+
+=over
+
+=item * L<Perl::Critic::Policy::CodeLayout::ProhibitParensWithBuiltins|https://metacpan.org/pod/Perl::Critic::Policy::CodeLayout::ProhibitParensWithBuiltins>
+
+=back
 
 =head1 BUGS AND LIMITATIONS
 
