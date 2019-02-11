@@ -58,7 +58,7 @@ my $critic = Perl::Critic->new(
 {
     my $str = q[
         open(my $fh, '<', $file)
-            || die "Can't open '$file': $!";
+            or die "Can't open '$file': $!";
     ];
 
     my @violations = $critic->critique( \$str );
