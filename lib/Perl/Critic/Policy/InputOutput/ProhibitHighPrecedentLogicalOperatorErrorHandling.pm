@@ -86,7 +86,7 @@ This policy has no affiliation
 
 This policy addresses an anti-pattern and possible bug. If you use 3-argument C<open> combinted with the high precedence logical or operator C<||> for error handling.
 
-If the file parameter is
+If the file parameter is pointing to a non-existant file, the use of a high precedence logical operator C<||>, does not short-cut as expected. This implies that the bug only is present if the file does not exist. If the file exist, but cannot be opened the error handling is not working as expected.
 
     open my $fh, '<', $file
             || die "Can't open '$file': $!"; # not okay
@@ -96,6 +96,8 @@ If the file parameter is
 
     open my $fh, '<', $file
         or die "Can't open '$file': $!"; # okay
+
+The remedy is to use parentheses for C<open> or the lower precendedence logical operator C<or>.
 
 Alternatively L<autodie|https://metacpan.org/pod/autodie> can be used,
 
@@ -125,7 +127,9 @@ This distribution requires:
 
 =over
 
-=item * L<Perl 5.14|https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod>, released 2011-05-14
+=item * Perl 5.6.0 syntactially for the actual implementation
+
+=item * L<Perl 5.14|https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod> for developing the distribution, which relies on L<Dist::Zilla|http://dzil.org/>. The features on which this policy relies, where introduced in Perl 5.14, but this does not make for an actual requirement for the policy only the recommendations it imposes.
 
 =item * L<Carp|https://metacpan.org/pod/Carp>, in core since Perl 5.
 
@@ -158,8 +162,6 @@ Ideas and suggestions for improvements and new features are listed in GitHub and
 =item * L<Same Blog post on Medium: A Subtle Bug|https://culturedperl.com/a-subtle-bug-c9982f681cb8> by Dave Cross L<@davorg|https://twitter.com/davorg>
 
 =item * L<Perl::Critic|https://metacpan.org/pod/Perl::Critic>
-
-=item * L<Perl::Critic::Policy::RegularExpressions::RequireExtendedFormatting|https://metacpan.org/pod/Perl::Critic::Policy::RegularExpressions::RequireExtendedFormatting>
 
 =back
 
