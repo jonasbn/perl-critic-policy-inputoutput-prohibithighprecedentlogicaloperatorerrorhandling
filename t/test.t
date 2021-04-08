@@ -78,4 +78,64 @@ my $critic = Perl::Critic->new(
     is( scalar @violations, 0 );
 }
 
+# The bug with two-arg open
+{
+    my $str = q[
+        open my $fh, "<$file"
+            || die "Can't open '$file': $!";
+    ];
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 1 );
+}
+
+# No bug - with parenthesis
+{
+    my $str = q[
+        open(my $fh, "<$file")
+            || die "Can't open '$file': $!";
+    ];
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 0 );
+}
+
+# No bug - with or
+{
+    my $str = q[
+        open my $fh, "<$file"
+            or die "Can't open '$file': $!";
+    ];
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 0 );
+}
+
+# No bug - with or and parenthesis
+{
+    my $str = q[
+        open(my $fh, "<$file")
+            or die "Can't open '$file': $!";
+    ];
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 0 );
+}
+
+# No bug - with or and parenthesis and whitespace
+{
+    my $str = q[
+        open ( my $fh, "<$file" )
+            || die "Can't open '$file': $!";
+    ];
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 0 );
+}
+
 exit 0;
