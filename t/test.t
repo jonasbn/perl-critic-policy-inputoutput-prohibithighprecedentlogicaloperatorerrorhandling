@@ -27,7 +27,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 1 );
+    is( scalar @violations, 1, 'The bug' );
 }
 
 # No bug - with parenthesis
@@ -39,7 +39,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with parenthesis');
 }
 
 # No bug - with or
@@ -51,7 +51,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with or');
 }
 
 # No bug - with or and parenthesis
@@ -63,7 +63,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with or and parenthesis');
 }
 
 # No bug - with or and parenthesis and whitespace
@@ -75,7 +75,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with or and parenthesis and whitespace');
 }
 
 # The bug with two-arg open
@@ -87,7 +87,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 1 );
+    is( scalar @violations, 1, 'Two-arg open bug');
 }
 
 # No bug - with parenthesis
@@ -99,7 +99,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with parenthesis');
 }
 
 # No bug - with or
@@ -111,7 +111,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with or');
 }
 
 # No bug - with or and parenthesis
@@ -123,7 +123,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with or and parenthesis');
 }
 
 # No bug - with or and parenthesis and whitespace
@@ -135,7 +135,7 @@ my $critic = Perl::Critic->new(
 
     my @violations = $critic->critique( \$str );
 
-    is( scalar @violations, 0 );
+    is( scalar @violations, 0, 'No bug - with or and parenthesis and whitespace');
 }
 
 exit 0;
