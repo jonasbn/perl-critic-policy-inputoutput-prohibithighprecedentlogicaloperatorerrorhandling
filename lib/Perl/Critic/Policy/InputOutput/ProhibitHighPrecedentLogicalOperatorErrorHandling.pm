@@ -69,13 +69,21 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
+=begin stopwords
+
+autodie TODO Readonly jonasbn ACKNOWLEDGEMENTS DAVECROSS Brømsø
+
+=end stopwords
+
 =head1 NAME
 
 Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling - prohibits logical error handling in open statements
 
 =head1 VERSION
 
-This documentation describes version 0.01
+This documentation describes version: 0.02
 
 =head1 AFFILIATION
 
@@ -189,7 +197,7 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 =over
 
-=item * jonasbn <jonasbn@cpan.org>
+=item * Jonas Brømsø (jonasbn) <jonasbn@cpan.org>
 
 =back
 
@@ -197,13 +205,15 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 =over
 
-=item * L<Dave Cross (@davord)|https://twitter.com/davorg> / L<DAVECROSS|https://metacpan.org/author/DAVECROSS> for the blog post sparking the idea for this policy, see link to blog post under L</MOTIVATION> or L</REFERENCES>
+=item * L<Dave Cross (@davorg)|https://twitter.com/davorg> / L<DAVECROSS|https://metacpan.org/author/DAVECROSS> for the blog post sparking the idea for this policy, see link to blog post under L</MOTIVATION> or L</REFERENCES>
+
+=item * L<Nathan Mills|https://github.com/Quipyowert2> for contributing to this policy, documenting and testing two-argument C<open>
 
 =back
 
 =head1 LICENSE AND COPYRIGHT
 
-Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is (C) by jonasbn 2019
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is (C) by jonasbn 2019-2021
 
 Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is released under the Artistic License 2.0
 
