@@ -4,7 +4,7 @@ Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHand
 
 # VERSION
 
-This documentation describes version 0.01
+This documentation describes version: 0.02
 
 # AFFILIATION
 
@@ -93,15 +93,16 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 # AUTHOR
 
-- jonasbn <jonasbn@cpan.org>
+- Jonas Brømsø (jonasbn) <jonasbn@cpan.org>
 
 # ACKNOWLEDGEMENTS
 
-- [Dave Cross (@davord)](https://twitter.com/davorg) / [DAVECROSS](https://metacpan.org/author/DAVECROSS) for the blog post sparking the idea for this policy, see link to blog post under ["MOTIVATION"](#motivation) or ["REFERENCES"](#references)
+- [Dave Cross (@davorg)](https://twitter.com/davorg) / [DAVECROSS](https://metacpan.org/author/DAVECROSS) for the blog post sparking the idea for this policy, see link to blog post under ["MOTIVATION"](#motivation) or ["REFERENCES"](#references)
+- [Nathan Mills](https://github.com/Quipyowert2) for contributing to this policy, documenting and testing two-argument `open`
 
 # LICENSE AND COPYRIGHT
 
-Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is (C) by jonasbn 2019
+Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is (C) by jonasbn 2019-2021
 
 Perl::Critic::Policy::InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling is released under the Artistic License 2.0
 
