@@ -115,7 +115,7 @@ If the file parameter is pointing to a non-existent file, the use of a high prec
 
 The remedy is to use parentheses for C<open> or the lower precedence logical operator C<or>.
 
-Alternatively L<autodie|https://metacpan.org/pod/autodie> can be used,
+Alternatively, L<autodie|https://metacpan.org/pod/autodie> can be used.
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
