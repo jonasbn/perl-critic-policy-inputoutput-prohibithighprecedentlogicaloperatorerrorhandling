@@ -36,7 +36,7 @@ If the file parameter is pointing to a non-existent file, the use of a high prec
 
 The remedy is to use parentheses for `open` or the lower precedence logical operator `or`.
 
-Alternatively [autodie](https://metacpan.org/pod/autodie) can be used,
+Alternatively, [autodie](https://metacpan.org/pod/autodie) can be used.
 
 # CONFIGURATION AND ENVIRONMENT
 
