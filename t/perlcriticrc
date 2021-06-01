@@ -13,6 +13,8 @@ allow_leading_tabs = 0
 
 [-Modules::RequireVersionVar]
 
+[-Documentation::PodSpelling]
+
 #------------------------------------------------------------------------------
 
 [-InputOutput::ProhibitHighPrecedentLogicalOperatorErrorHandling]
