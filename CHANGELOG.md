@@ -1,10 +1,10 @@
 # Change log for Perl-Critic-Policy-InputOutput-ProhibitHighPrecedentLogicalOperatorErrorHandling
 
-0.02 2021-05-24T10:47:11Z feature release
+## 0.02 2021-05-24T10:47:11Z feature release
 
 - First public release
-- Added contribution from Nathan Mills via PR: #6 addressing issue #3. This documents and tests that the policy works for both two- and three argument open
+- Added contribution from Nathan Mills via PR: [#6](https://github.com/jonasbn/perl-critic-policy-inputoutput-prohibithighprecedentlogicaloperatorerrorhandling/pull/6) addressing issue [#3](https://github.com/jonasbn/perl-critic-policy-inputoutput-prohibithighprecedentlogicaloperatorerrorhandling/issues/3). This documents and tests that the policy works for both two- and three argument `open`
 
-0.01 2019-02-10T09:43:47Z release candidate
+## 0.01 2019-02-10T09:43:47Z release candidate
 
 No releases made at this point in time, source code only available on GitHub
