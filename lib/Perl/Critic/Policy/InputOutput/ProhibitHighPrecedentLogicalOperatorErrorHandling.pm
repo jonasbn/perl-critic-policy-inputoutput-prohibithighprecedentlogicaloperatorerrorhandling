@@ -207,6 +207,8 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 
 =item * L<Dave Cross (@davorg)|https://twitter.com/davorg> / L<DAVECROSS|https://metacpan.org/author/DAVECROSS> for the blog post sparking the idea for this policy, see link to blog post under L</MOTIVATION> or L</REFERENCES>
 
+=item * L<Ed Sabol|https://github.com/esabol> for taking the time to correct some bad punctuation
+
 =item * L<Nathan Mills|https://github.com/Quipyowert2> for contributing to this policy, documenting and testing two-argument C<open>
 
 =back

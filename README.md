@@ -98,6 +98,7 @@ In the blog post Dave demonstrates a very subtle bug, which I think many Perl pr
 # ACKNOWLEDGEMENTS
 
 - [Dave Cross (@davorg)](https://twitter.com/davorg) / [DAVECROSS](https://metacpan.org/author/DAVECROSS) for the blog post sparking the idea for this policy, see link to blog post under ["MOTIVATION"](#motivation) or ["REFERENCES"](#references)
+- [Ed Sabol](https://github.com/esabol) for taking the time to correct some bad punctuation
 - [Nathan Mills](https://github.com/Quipyowert2) for contributing to this policy, documenting and testing two-argument `open`
 
 # LICENSE AND COPYRIGHT
