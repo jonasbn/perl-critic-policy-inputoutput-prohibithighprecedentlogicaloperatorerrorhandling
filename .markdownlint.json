@@ -3,5 +3,6 @@
     "single-title": false,
     "no-trailing-spaces": false,
     "line-length": false,
-    "no-multiple-blanks": false
+    "no-multiple-blanks": false,
+    "link-fragments": false
 }
